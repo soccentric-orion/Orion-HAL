@@ -4,7 +4,7 @@
 
 Orion-HAL is a comprehensive hardware abstraction and testing suite targeting the **Orion Platform** (ST STM32MP157F SoC + Cortex-M4 south-bridge). It provides a modular, extensible architecture for testing and exercising hardware interfaces and system components commonly found in automotive and industrial applications.
 
-> **Port history**: Originally developed for NVIDIA Jetson AGX Orin (Tegra234).
+> **Port history**: Originally developed for STM32MP157F ().
 > Ported to Orion Platform (ST STM32MP157F + Cortex-M4) — all platform-specific paths, constants,
 > and device nodes updated for the Pi 5 hardware.
 

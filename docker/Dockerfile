@@ -1,4 +1,4 @@
-# Orion Platform (Sitara AM62x/AM64x / PRU-ICSS) build container
+# Orion Platform (STM32MP157F / ) build container
 # Uses Ubuntu 22.04 LTS for ARM64 — runs natively on Pi5 or via QEMU on x86_64
 FROM ubuntu:22.04
 
