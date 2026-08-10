@@ -744,8 +744,8 @@ TestOutput SystemMemoryTesting::testDmaTofromMemory()
         }
     }
 
-    // Check for sitara_compatible-dma driver
-    std::ifstream drvF("/sys/bus/platform/drivers/sitara_compatible-dma/uevent");
+    // Check for orion_compatible-dma driver
+    std::ifstream drvF("/sys/bus/platform/drivers/orion_compatible-dma/uevent");
     if (drvF.is_open()) {
         data.push_back("Orion compatible DMA driver: loaded");
         dmaPresent = true;

@@ -652,7 +652,7 @@ TestOutput StorageTesting::testPowerLossProtection()
     if (!e2fsck.empty()) data.push_back("ext4 journal: " + e2fsck);
 
     // Check Orion PMIC UPS/power-good
-    std::string psu = storReadFile("/sys/class/power_supply/sitara-psu/online");
+    std::string psu = storReadFile("/sys/class/power_supply/ST STM32MP157F-psu/online");
     if (!psu.empty()) data.push_back("Orion PSU online: " + psu);
 
     {
