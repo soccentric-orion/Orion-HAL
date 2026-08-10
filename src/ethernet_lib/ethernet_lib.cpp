@@ -1,7 +1,7 @@
 /**
  * @file ethernet_lib.cpp
  * @brief Implementation file for EthernetTesting class — Orion Platform
- *        Tests the Sitara AM62x/AM64x built-in Gigabit Ethernet (1 GbE, not 10 GbE).
+ *        Tests the ST STM32MP157F built-in Gigabit Ethernet (1 GbE, not 10 GbE).
  *        Orion does NOT have 10 GbE hardware.
  * @author sandesh ghimire
  * @copyright (C) Soccentric LLC */
@@ -93,14 +93,14 @@ EthernetTesting::~EthernetTesting()
 
 // ---------------------------------------------------------------------------
 // 1. test10GigabitLinkEstablishment
-//    Orion only has 1 GbE (Sitara AM62x/AM64x MAC). Document and verify 1G link.
+//    Orion only has 1 GbE (ST STM32MP157F MAC). Document and verify 1G link.
 // ---------------------------------------------------------------------------
 TestOutput EthernetTesting::test10GigabitLinkEstablishment()
 {
     std::vector<std::string> data;
     bool passed = true;
 
-    data.push_back("NOTE: Orion has Sitara AM62x/AM64x GbE (1 Gbps), NOT 10 GbE.");
+    data.push_back("NOTE: Orion has ST STM32MP157F GbE (1 Gbps), NOT 10 GbE.");
     data.push_back("Ethernet interface: " + std::string(ETH_IFACE));
 
     if (!ifaceExists(ETH_IFACE)) {
@@ -329,7 +329,7 @@ TestOutput EthernetTesting::testJumboFramesSupport()
 
     // Check if BCM genet driver supports jumbo frames
     std::string driver = ethReadFile("/sys/class/net/" + std::string(ETH_IFACE) + "/device/uevent");
-    data.push_back("Orion GbE driver: bcmgenet (Sitara AM62x/AM64x built-in MAC)");
+    data.push_back("Orion GbE driver: bcmgenet (ST STM32MP157F built-in MAC)");
 
     if (mtu >= 9000) {
         data.push_back("PASS: Jumbo frames supported (MTU " + std::to_string(mtu) + ").");

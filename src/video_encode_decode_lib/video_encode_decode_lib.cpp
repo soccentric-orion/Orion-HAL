@@ -3,7 +3,7 @@
  * @brief Implementation file for VideoEncodeDecodeTesting class – Orion Platform
  * @author sandesh ghimire
  * @copyright (C) Soccentric LLC *
- * Orion video codec hardware specifications (Sitara AM62x/AM64x VPU / PRU-ICSS):
+ * Orion video codec hardware specifications (ST STM32MP157F VPU / Cortex-M4):
  *   sitara_compatible-codec (V4L2 M2M firmware codec via VPU):
  *     - H.264 encode up to 1920×1080 @ 60 fps
  *     - H.264 decode up to 1920×1080 @ 60 fps

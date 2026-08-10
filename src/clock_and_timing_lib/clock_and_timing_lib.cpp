@@ -215,7 +215,7 @@ TestOutput ClockAndTimingTesting::testSystemClockAccuracy()
 /**
  * @brief Implementation of testPcieReferenceClock
  *
- * On Orion the PCIe reference clock is sourced from the Sitara AM62x/AM64x PLL and
+ * On Orion the PCIe reference clock is sourced from the ST STM32MP157F PLL and
  * is nominally 100 MHz (spread-spectrum variants ±0.5%).
  *
  * Strategy (Orion Platform):
@@ -315,7 +315,7 @@ TestOutput ClockAndTimingTesting::testPcieReferenceClock()
 /**
  * @brief Implementation of testUsbReferenceClock
  *
- * Orion xHCI controller uses a 100 MHz reference clock from PRU-ICSS
+ * Orion xHCI controller uses a 100 MHz reference clock from Cortex-M4
  * reference divided internally to generate USB 2.0 (48 MHz) and USB 3.x
  * (250 MHz) clocks.
  *
@@ -479,7 +479,7 @@ TestOutput ClockAndTimingTesting::testEthernetReferenceClock()
 /**
  * @brief Implementation of testCameraClockOutput
  *
- * Orion drives camera sensors via MIPI CSI-2 Unicam on PRU-ICSS
+ * Orion drives camera sensors via MIPI CSI-2 Unicam on Cortex-M4
  * uses a set of clocks (csi_clk, unicam_clk, extperiph1_clk, etc.).
  *
  * Tests:
@@ -538,7 +538,7 @@ TestOutput ClockAndTimingTesting::testCameraClockOutput()
 /**
  * @brief Implementation of testAudioClock
  *
- * Orion uses PRU-ICSS I2S for audio
+ * Orion uses Cortex-M4 I2S for audio
  * clocks are derived from the PLLA PLL (nominally 56.448 MHz or 73.728 MHz
  * depending on audio sample rate family).
  *

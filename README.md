@@ -2,18 +2,18 @@
 
 ## Overview
 
-Orion-HAL is a comprehensive hardware abstraction and testing suite targeting the **Orion Platform** (Sitara AM62x/AM64x SoC + PRU-ICSS south-bridge). It provides a modular, extensible architecture for testing and exercising hardware interfaces and system components commonly found in automotive and industrial applications.
+Orion-HAL is a comprehensive hardware abstraction and testing suite targeting the **Orion Platform** (ST STM32MP157F SoC + Cortex-M4 south-bridge). It provides a modular, extensible architecture for testing and exercising hardware interfaces and system components commonly found in automotive and industrial applications.
 
 > **Port history**: Originally developed for NVIDIA Jetson AGX Orin (Tegra234).
-> Ported to Orion Platform (Sitara AM62x/AM64x + PRU-ICSS) — all platform-specific paths, constants,
+> Ported to Orion Platform (ST STM32MP157F + Cortex-M4) — all platform-specific paths, constants,
 > and device nodes updated for the Pi 5 hardware.
 
 ### Target Platform
 
 | Property | Value |
 |---|---|
-| SoC | Sitara AM62x/AM64x (quad-core Cortex-A76 @ 2.4 GHz) |
-| South-bridge | PRU-ICSS (USB 3, PCIe Gen3 x1, GPIO, I2S, CSI/DSI) |
+| SoC | ST STM32MP157F (quad-core Cortex-A7 @ 2.4 GHz) |
+| South-bridge | Cortex-M4 (USB 3, PCIe Gen3 x1, GPIO, I2S, CSI/DSI) |
 | GPU | VideoCore VII (12 shader quad cores, 800 MHz max) |
 | Memory | 4 GB / 8 GB LPDDR4X-4267 |
 | AI Accelerator | Hailo-8 HAT+ (PCIe, ~26 INT8 TOPS) or Coral USB Edge TPU (~4 TOPS) |
@@ -21,7 +21,7 @@ Orion-HAL is a comprehensive hardware abstraction and testing suite targeting th
 
 ### Key Features
 
-- **Modular Library Architecture**: Separate libraries for CPU, GPU, DLA (Hailo-8/Coral), video codec (V4L2 M2M), camera (Unicam/PRU-ICSS), audio (PRU-ICSS I2S), PCIe, USB (xhci-hcd), GPIO (gpiochip4), storage, Ethernet, and more.
+- **Modular Library Architecture**: Separate libraries for CPU, GPU, DLA (Hailo-8/Coral), video codec (V4L2 M2M), camera (Unicam/Cortex-M4), audio (Cortex-M4 I2S), PCIe, USB (xhci-hcd), GPIO (gpiochip4), storage, Ethernet, and more.
 - **Orion Platform Header**: Centralised constants in `src/platform_orion_stm32mp1.h` (device paths, thermal thresholds, memory bandwidth).
 - **Cross-compilation via Docker**: ARM64 Ubuntu 24.04 container (`rpi5-builder`).
 - **Comprehensive Testing**: Unit tests, integration tests, and deployment workflows.
