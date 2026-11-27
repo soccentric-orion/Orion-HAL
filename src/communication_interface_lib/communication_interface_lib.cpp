@@ -1,7 +1,7 @@
 /**
  * @file communication_interface_lib.cpp
  * @brief Implementation file for CommunicationInterfaceTesting class
- *        Targeted at Orion Platform platform.
+ *        Targeted at Orion platform.
  * @author sandesh ghimire
  * @copyright (C) Soccentric LLC */
 

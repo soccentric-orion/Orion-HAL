@@ -145,7 +145,7 @@ static std::string vedGetModel()
     return vedReadFile(ORION_STM32MP1_DT_MODEL_PATH);
 }
 
-/** Confirm we are running on a Orion Platform platform. */
+/** Confirm we are running on an Orion platform. */
 static bool isPi5Platform()
 {
     std::string model = vedGetModel();

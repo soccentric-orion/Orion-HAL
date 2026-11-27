@@ -7,7 +7,7 @@ build:
 	docker buildx build --platform linux/arm64 --load --build-arg UID=$(shell id -u) --build-arg GID=$(shell id -g) -t $(IMAGE_NAME) .
 
 run:
-	# No --gpus flag: STM32MP157F has STM32MP157F (not CUDA)
+	# No --gpus flag: STM32MP157F has no CUDA-capable GPU
 	docker run -it --rm --hostname "STM32MP157F" $(IMAGE_NAME)
 
 clean:
